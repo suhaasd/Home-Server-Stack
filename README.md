@@ -1,4 +1,4 @@
-#Home Server Stack
+# Home Server Stack
 ---
 
 ## Overview
