@@ -1,8 +1,4 @@
-# 🧠 Personal Home Server Stack — macOS
-
-> A fully private, GPU-accelerated AI + media + storage server running on your Mac.
-> Accessible from anywhere in the world via encrypted overlay networking. Zero cloud dependency.
-
+#Home Server Stack
 ---
 
 ## Overview
