@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./jellyfin_config:/config
+      - ./jellyfin_cache:/cache
+      - /Volumes/StorageServer/Movies:/media:ro   # SSD movies folder (read-only)
+
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    restart: unless-stopped
+    ports:
+      - "8082:80"
+    volumes:
+      - /Volumes/StorageServer/SharedFiles:/srv   # SSD shared files folder
+      - ./filebrowser.db:/database.db
